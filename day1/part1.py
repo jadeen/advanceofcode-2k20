@@ -1,0 +1,13 @@
+#!/usr/bin/env python
+
+f = open("input.txt")
+
+input = f.read()
+
+codes = [int(value) for value in input.split()]
+
+for idx, code in enumerate(codes):
+    for idx2, code2 in enumerate(codes):
+        if code + code2 == 2020 and idx != idx2:
+            print(code * code)
+            exit()
